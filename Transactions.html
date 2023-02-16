@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <title>Browsing Transactions</title>
+  <link href="style.css" rel="stylesheet"/>
+  <script src="index.js" charset="utf-8" defer></script>
+
+</head>
+
+<body class="outer-box">
+<main class="content">
+  <H1 id="center" class="title"><strong>Transactions</strong></H1>
+<div id="nav-container">
+  <div id="button" class="next-to post"><a href="index.html">Customers</a></div>
+  <div id="button" class="next-to post"><a href="Merchandise.html">Merchandise</a></div>
+  <div id="button" class="next-to post"><a href="Favorites.html">Favorites</a></div>
+</div>  
+  <div class="overflow">
+  <table id="center-table" >
+    <tr>
+        <th>ID</th>
+        <th>transactionDetailsID</th>
+        <th>customerID</th>
+        <th>merchandiseID</th>
+        <th>transactionAmount</th>
+        <th>transactionDate</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>3</td>
+         <td>6</td>
+        <td>18.50</td>
+        <td>2022-12-08</td>
+         <td><button type="button">Edit</button></td>
+         <td><button type="button">Delete</button></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>7</td>
+        <td>90.99</td>
+        <td>2020-11-19</td>
+        <td><button type="button">Edit</button></td>
+        <td><button type="button">Delete</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>2</td>
+        <td>5</td>
+        <td>15.99</td>
+        <td>2021-11-20</td>
+        <td><button type="button">Edit</button></td>
+        <td><button type="button">Delete</button></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>4</td>
+        <td>1</td>
+        <td>9</td>
+        <td>9.99</td>
+        <td>2023-01-15</td>
+        <td><button type="button">Edit</button></td>
+        <td><button type="button">Delete</button></td>
+    </tr>
+  </table>
+</div>
+<button type="button" id="new-record-button">New</button>
+</main>
+<div id="modal-backdrop" class="hidden"></div>
+<div id="new-record-modal" class="hidden">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add a Transaction</h3>
+            <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            
+            <Table id="center-table">
+                <tr>
+                    <th>transactionDetailsID</th>
+                    <td><input type="text" id="input-transaction-id"></td>
+                </tr>
+                <tr>
+                    <th>customerID</th>
+                    <td><input type="text" id="input-trans-cust-id"></td>
+                </tr>
+                <tr>
+                    <th>merchandiseID</th>
+                    <td><input type="text" id="input-trans-merch-id"></td>
+                </tr>
+                    <th>transactionAmount</th>
+                    <td><input type="text" id="input-trans-amount"></td>
+                </tr>
+                <tr>
+                    <th>transactionDate</th>
+                    <td><input type="text" id="input-trans-date"></td>
+                </tr>
+            </Table>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+            <button type="button" id="modal-accept" class="action-button">Add Record</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
